@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/account/', include('apps.account.urls')),
+    path('api/market/', include('apps.product.urls')),
 ]
 # api/account/registert/ -> account/register/
