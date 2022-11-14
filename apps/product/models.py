@@ -52,7 +52,7 @@ class Product(models.Model):
         on_delete=models.CASCADE,
         related_name='products'
     )
-
+    
     def save(self, *args, **kwargs):
         self.in_stock = self.quantity > 0
         if not self.slug:

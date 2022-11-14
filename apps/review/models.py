@@ -22,3 +22,6 @@ class Comment(models.Model):
         upload_to='comments_images', 
         blank=True, 
         null=True)
+
+    def __str__(self):
+        return f'Comment from {self.user.username} to {self.product.title}'
